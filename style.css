@@ -184,7 +184,7 @@ body {
     color: hsl(220, 98%, 61%);
 }
 
-.items-statuses .active  {
+.items-statuses .active, .items-clear .active  {
     color: hsl(220, 98%, 61%);
 }
 

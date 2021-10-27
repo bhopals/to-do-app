@@ -67,12 +67,12 @@
                     5 items left
                 </div>
                 <div class="items-statuses">
-                    <span class="active" onclick="filterItem('')">All</span>
-                    <span onclick="filterItem('active')">Active</span>
-                    <span onclick="filterItem('completed')">Completed</span>
+                    <span id="to-do-all" class="active item-status" onclick="filterItem('', 'to-do-all')">All</span>
+                    <span id="to-do-active" class="item-status" onclick="filterItem('active', 'to-do-active')">Active</span>
+                    <span id="to-do-completed" class="item-status" onclick="filterItem('completed', 'to-do-completed')">Completed</span>
                 </div>
                 <div class="items-clear">
-                    <span onclick="filterItem('')">Clear Completed</span>
+                    <span id="to-do-clear" class="item-status" onclick="filterItem('', 'to-do-clear')">Clear Completed</span>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 
-let activeCount = 2
+let activeCount = 0
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) => {
         let items = [];
@@ -74,7 +74,8 @@ function markCompleted(id){
     activeCount -= 1
 }
 
-function filterItem(type) {
+function filterItem(type, id) {
+    addRemoveActiveClass(id)
     db.collection("todo-items").onSnapshot((snapshot) => {
         let items = []
         snapshot.docs.forEach((doc) => {
@@ -88,6 +89,15 @@ function filterItem(type) {
     })
 }
 
+function addRemoveActiveClass(id) {
+    const items = document.getElementsByClassName('item-status')
+    for(let i=0; i<items.length; i++) {
+        document.getElementsByClassName('item-status')[i].classList.remove('active')
+    }
+    if(id) {
+        document.getElementById(id).classList.add('active')
+    }
+}
 function setActiveCount(items) {
     activeCount = items.filter(item => item.status === 'active').length
     document.getElementById('items-left-id').innerHTML = activeCount > 1 ? `${activeCount} items left` : `${activeCount} item left`
