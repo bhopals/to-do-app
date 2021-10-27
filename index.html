@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="todo-text checked">
-                        Cut the lawn
+                        Grab some food
                     </div>
                 </div>
                 <div class="todo-item">
@@ -58,30 +58,21 @@
                         </div>
                     </div>
                     <div class="todo-text">
-                        Cut the lawn
-                    </div>
-                </div>
-                <div class="todo-item">
-                    <div class="check">
-                        <div class="check-mark">
-                        </div>
-                    </div>
-                    <div class="todo-text">
-                        Cut the lawn
+                        Bring in Groceries
                     </div>
                 </div>
             </div>
             <div class="todo-items-info">
-                <div class="items-left">
+                <div class="items-left" id="items-left-id">
                     5 items left
                 </div>
                 <div class="items-statuses">
-                    <span class="active">All</span>
-                    <span>Active</span>
-                    <span>Completed</span>
+                    <span class="active" onclick="filterItem('')">All</span>
+                    <span onclick="filterItem('active')">Active</span>
+                    <span onclick="filterItem('completed')">Completed</span>
                 </div>
                 <div class="items-clear">
-                    <span>Clear Completed</span>
+                    <span onclick="filterItem('')">Clear Completed</span>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 
+let activeCount = 2
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) => {
         let items = [];
@@ -8,6 +9,7 @@ function getItems(){
                 ...doc.data()
             })
         })
+        setActiveCount(items)
         generateItems(items);
     })
 }
@@ -69,6 +71,26 @@ function markCompleted(id){
             }
         }
     })
+    activeCount -= 1
+}
+
+function filterItem(type) {
+    db.collection("todo-items").onSnapshot((snapshot) => {
+        let items = []
+        snapshot.docs.forEach((doc) => {
+            items.push({
+                id: doc.id, 
+                ...doc.data()
+            })
+        })
+        setActiveCount(items)
+        generateItems(items.filter(item => type ==='' || item.status === type))
+    })
+}
+
+function setActiveCount(items) {
+    activeCount = items.filter(item => item.status === 'active').length
+    document.getElementById('items-left-id').innerHTML = activeCount > 1 ? `${activeCount} items left` : `${activeCount} item left`
 }
 
 getItems();
