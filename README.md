@@ -9,4 +9,4 @@ A Demo TO-DO app to list out tasks that are completed / active status
 
 
 ## Demo Link
-[Demo](https://boring-euler-55440b.netlify.app/){:target="_blank"}
+[Demo](https://boring-euler-55440b.netlify.app/)
