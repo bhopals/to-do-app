@@ -1,4 +1,4 @@
-var firebaseConfig = {
+let firebaseConfig = {
     apiKey: "AIzaSyA0Rbp35cPeWo-jBTZBjvAiTEbb1aPxymw",
     authDomain: "to-do-app-f4bc6.firebaseapp.com",
     projectId: "to-do-app-f4bc6",
@@ -10,4 +10,4 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-var db = firebase.firestore();
+let db = firebase.firestore();
