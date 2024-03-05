@@ -1,3 +1,4 @@
+// Firebase configuration
 let firebaseConfig = {
     apiKey: "AIzaSyA0Rbp35cPeWo-jBTZBjvAiTEbb1aPxymw",
     authDomain: "to-do-app-f4bc6.firebaseapp.com",
