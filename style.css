@@ -38,6 +38,9 @@ body {
 .container_item {
     float:left;
 }
+.width_100 {
+ width: 100%;
+}
 .header {
     display: flex;
     justify-content: space-between;
